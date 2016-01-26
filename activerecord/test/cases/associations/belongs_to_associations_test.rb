@@ -414,6 +414,7 @@ class BelongsToAssociationsTest < ActiveRecord::TestCase
     reply1.topic = topic1
 
     assert reply1.save
+    reply1 = Reply.find_by_id(reply1.id)
     assert_equal 1, Topic.find(topic1.id).replies.size
     assert_equal 0, Topic.find(topic2.id).replies.size
 
