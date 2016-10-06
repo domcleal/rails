@@ -1,3 +1,8 @@
+*   Raise ActiveRecord::RecordNotFound from collection `*_ids` setters
+    for unknown IDs with a better error message.
+
+    *Dominic Cleal*
+
 *   Introduce `Model#reload_<association>` to bring back the behavior
     of `Article.category(true)` where `category` is a singular
     association.
